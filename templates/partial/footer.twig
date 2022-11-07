@@ -1,0 +1,27 @@
+<footer id="footer" class="bg-darken pt-5 mt-5">
+
+    <div class="container text-center py-6 text-white py-5">
+
+        <h3>Kapcsolat</h3>
+        <p>Hétfőtől péntekig 9 és 17 óra között telefonon</p>
+        <a href="tel:+36303563082" class="btn btn-lg btn-primary my-4">+36 30 356 30 82</a>
+        <p>
+            vagy <br>
+            <span class="fw-bold">info@vicetech.hu</span>
+        </p>
+    </div>
+
+    <div class="container border-top">
+        <div class="opacity-50 text-white py-3">
+            <p class="small">{{ options.copyright }}</p>
+            <ul class="small nav justify-content-center">
+                {% for item in menuFooter.get_items %}
+                    <li class="nav-item {% if item.current %}active{% endif %}">
+                        <a class="nav-link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+                <li class="nav-item"><a class="nav-link" href="https://weart.hu">Készítette: weart.hu</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>

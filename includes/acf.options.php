@@ -6,7 +6,7 @@ Class AcfFields extends Singleton
     {
         if( class_exists('ACF') ):
             // add_filter('acf/settings/show_admin', '__return_false');
-            // $this -> optionsPage();
+            $this -> optionsPage();
         endif;
     }
 

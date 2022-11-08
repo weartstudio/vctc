@@ -12,15 +12,15 @@
     </div>
 
     <div class="container border-top">
-        <div class="opacity-50 text-white py-3">
-            <p class="small">{{ options.copyright }}</p>
+        <div class="opacity-50 text-white py-4">
+            <p class="small text-center m-0">{{ options.copyright }} Készítette <a class="text-body" href="https://weart.hu">weart.hu</a></p>
             <ul class="small nav justify-content-center">
                 {% for item in menuFooter.get_items %}
                     <li class="nav-item {% if item.current %}active{% endif %}">
                         <a class="nav-link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
                     </li>
                 {% endfor %}
-                <li class="nav-item"><a class="nav-link" href="https://weart.hu">Készítette: weart.hu</a></li>
+                <li class="nav-item"></li>
             </ul>
         </div>
     </div>

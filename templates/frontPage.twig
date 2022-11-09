@@ -9,12 +9,12 @@
 
 			<div class="col-xl-6 col-lg-7">
 
-				<h1>Professzionális épülethangosítás a  legmodernebb módon</h1>
+				<h1>{{ post.meta('hero-title') }}</h1>
 
-				<div class="lead my-4 ms-4">Donec vitae luctus ipsum, et dignissim nibh. Sed gravida volutpat fringilla. Praesent sodales eget sapien at euismod. </div>
+				<div class="lead my-4 ms-4">{{ post.meta('hero-lead') }}</div>
 				<div class="d-flex flex-column flex-sm-row ms-4">
-					<div class="btn btn-primary">Kapcsolat</div>
-					<div class="btn btn-link">Rólunk <i class="fas fa-arrow-right"></i></div>
+					<a href="{{ post.meta('btn-1').url }}" class="btn btn-primary">{{ post.meta('btn-1').title }}</a>
+					<a href="{{ post.meta('btn-2').url }}" class="btn btn-link">{{ post.meta('btn-1').title }} <i class="fas fa-arrow-right"></i></a>
 				</div>
 
 			</div>
@@ -23,5 +23,18 @@
 	</div>
 </header>
 
+<div class="container my-7">
+	<div class="row g-5 align-items-center">
+		<div class="col-lg">
+			<img class="img-fluid" src="{{ Image(post.meta('featured-img')).src }}" alt="{{ Image(post.meta('featured-img')).title }}">
+		</div>
+		<div class="col-lg">
+			<h4 class="h5 fw-normal text-uppercase text-primary">{{ post.meta('featured-tag') }}</h4>
+			<h2 class="h2">{{ post.meta('featured-title') }}</h2>
+			<div class="ms-4 my-4">{{ post.meta('featured-lead') }}</div>
+			<a href="{{ post.meta('featured-btn').url }}" class="p-0 ms-4 btn btn-link">{{ post.meta('featured-btn').title }} <i class="fas fa-arrow-right"></i></a>
+		</div>
+	</div>
+</div>
 
 {% endblock %}

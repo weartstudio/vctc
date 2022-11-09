@@ -3,31 +3,6 @@
     "title": "Kiemelt cikk",
     "fields": [
         {
-            "key": "field_63692101b7dc6",
-            "label": "Kép",
-            "name": "featured-img",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
             "key": "field_63692064b7dc2",
             "label": "Címke",
             "name": "featured-tag",
@@ -57,7 +32,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -83,9 +58,34 @@
             },
             "default_value": "",
             "maxlength": "",
-            "rows": "",
+            "rows": 3,
             "placeholder": "",
-            "new_lines": ""
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_63692101b7dc6",
+            "label": "Kép",
+            "name": "featured-img",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_636920e9b7dc5",
@@ -97,7 +97,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -122,5 +122,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667834234
+    "modified": 1667923779
 }

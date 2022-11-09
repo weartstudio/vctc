@@ -2,12 +2,12 @@
 
     <div class="container text-center py-6 text-white py-5">
 
-        <h3>Kapcsolat</h3>
-        <p>Hétfőtől péntekig 9 és 17 óra között telefonon</p>
-        <a href="tel:+36303563082" class="btn btn-lg btn-primary my-4">+36 30 356 30 82</a>
+        <h3>{{ options.title }}</h3>
+        <p>{{ options.subtitle }}</p>
+        <a href="{{ options.btn.url }}" class="btn btn-lg btn-primary my-4">{{ options.btn.title }}</a>
         <p>
             vagy <br>
-            <span class="fw-bold">info@vicetech.hu</span>
+            <span class="fw-bold">{{ options.email }}</span>
         </p>
     </div>
 

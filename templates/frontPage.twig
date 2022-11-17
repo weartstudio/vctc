@@ -37,4 +37,19 @@
 	</div>
 </div>
 
+<div class="container my-5">
+	<h4 class="h5 fw-normal text-uppercase text-primary">{{ post.meta('blog-tag') }}</h4>
+	<h2 class="h2 mb-5">{{ post.meta('blog-title') }}</h2>
+	<div class="row g-5">
+		{% for item in posts %}
+			<div class="col-lg-4 col-sm-6">
+				<a href="{{ post.link }}">
+					<div class="ratio ratio-16x9 bg-cover mb-4" style="background-image: url({{ item.thumbnail.src }})"></div>
+				</a>
+				<h2 class="h4"><a class="text-reset" href="{{ item.link.url }}">{{ item.title }}</a></h2>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+
 {% endblock %}

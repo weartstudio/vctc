@@ -58,12 +58,22 @@ $spacers: (
 
 body{
   background: $c-dark;
-}
-
-.btn{
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  &.btn-link{ text-decoration: none; }
+  a{
+    color: $body-color;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      text-decoration-color: $c-primary;
+    }
+  }
+  .btn{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &.btn-link{ text-decoration: none; }
+  }
+  .bg-cover{
+    background-size: cover;
+  }
 }
 
 #main-menu{

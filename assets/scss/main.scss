@@ -58,7 +58,7 @@ $spacers: (
 
 body{
   background: $c-dark;
-  a{
+  a:not(.nav-link){
     color: $body-color;
     text-decoration: none;
     &:hover{
@@ -70,6 +70,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 2px;
     &.btn-link{ text-decoration: none; }
+    &.btn-primary{ color: $c-dark }
   }
   .bg-cover{
     background-size: cover;

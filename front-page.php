@@ -10,7 +10,7 @@ $args = array(
 			'date' => 'DESC'
 	)
 );
-$context['posts'] =  Timber::get_posts( $args );
+$context['posts'] =  new Timber\PostQuery( $args );
 
 $context['hederimage'] = get_header_image();
 

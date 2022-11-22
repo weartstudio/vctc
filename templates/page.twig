@@ -21,14 +21,12 @@
 	<div class="pt-5 pb-1 container">
 		<div class="row g-5">
 			{% for item in featured %}
-			<div class="col-lg col-sm-6 text-center">
-				<h2 class="h5">
-					<i class="fa-solid fa-file-lines me-2"></i>
-					<a class="text-reset" href="{{ item.link }}">
-						{{ item.title }}
-					</a>
-				</h2>
-			</div>
+				<div class="col-lg col-sm-6 text-center">
+					<h2 class="h5">
+						<a class="text-reset" href="{{ item.link }}">{{ item.title }}</a>
+						<i class="fa-solid fa-chevron-right ms-2"></i>
+					</h2>
+				</div>
 			{% endfor %}
 		</div>
 	</div>

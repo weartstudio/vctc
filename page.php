@@ -10,11 +10,9 @@ $args = array(
 	'posts_per_page' => 4,
 	'post__in' => get_field('featured-pages','option'),
 	'post__not_in' => array(get_the_ID()),
-	'orderby' => array(
-			'date' => 'DESC'
-	)
 );
-$context['featured'] =  Timber::get_posts( $args );
+$timber_pages = new Timber\PostQuery( $args );
+$context['featured'] =  $timber_pages;
 
 
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );

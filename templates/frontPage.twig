@@ -42,12 +42,7 @@
 	<h2 class="h2 mb-5">{{ post.meta('blog-title') }}</h2>
 	<div class="row g-5">
 		{% for item in posts %}
-			<div class="col-lg-4 col-sm-6">
-				<a href="{{ item.link }}">
-					<div class="ratio ratio-16x9 bg-cover mb-4" style="background-image: url({{ item.thumbnail.src }})"></div>
-				</a>
-				<h2 class="h4"><a class="text-reset" href="{{ item.link }}">{{ item.title }}</a></h2>
-			</div>
+			{% include 'partial/item.twig' with { item } %}
 		{% endfor %}
 	</div>
 </div>

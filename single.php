@@ -2,8 +2,7 @@
 
 $context = Timber::context();
 
-$timber_post     = new Timber\Post();
-$context['post'] = $timber_post;
+$context['post'] = new Timber\Post();
 
 $args = array(
 	'post_type' => 'post',
@@ -12,6 +11,6 @@ $args = array(
 	'posts_per_page' => 3,
 	'orderby' => 'date',
 );
-$context['related'] =  Timber::get_posts( $args );
+$context['related'] =  new Timber\PostQuery( $args );
 
 Timber::render( 'single.twig', $context );

@@ -22,10 +22,10 @@
 		<div class="row g-5">
 			{% for item in featured %}
 				<div class="col-lg col-sm-6 text-center">
-					<h2 class="h5">
-						<a class="text-reset" href="{{ item.link }}">{{ item.title }}</a>
+					<a class="btn btn-link px-0" href="{{ item.link }}">
+						{{ item.title }}
 						<i class="fa-solid fa-chevron-right ms-2"></i>
-					</h2>
+					</a>
 				</div>
 			{% endfor %}
 		</div>

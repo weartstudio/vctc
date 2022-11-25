@@ -3,13 +3,42 @@
 {% block content %}
 <div class="mt-8">
 
-	<header class="container py-5 text-center">
-		<h1>{{ post.title }}</h1>
-	</header>
+	{% if not title == "" %}
+		<header class="container py-5 text-center">
+			<h1>{{ title }}</h1>
+		</header>
+	{% endif %}
 
-	<div class="bg-white text-dark">
+	{% if title == "" %}
 		<div class="container py-5">
 			<div class="row g-5">
+				{% for cat in cats %}
+					<div class="col-sm-6">
+						<div class="row align-items-center g-4">
+							<div class="col-lg-4">
+								<a href="{{site.link}}/category/{{cat.slug}}">
+									<div class="ratio ratio-4x3 bg-cover" style="background-image: url({{ cat.meta('category-img') }})"></div>
+								</a>
+							</div>
+							<div class="col-lg">
+								<h3 class="h4 mt-0">
+									<a href="{{site.link}}/category/{{cat.slug}}">{{ cat.name }}</a>
+									<i class="fa-solid fa-chevron-right ms-2"></i>
+								</h3>
+								<p class="mb-0">
+								{{ cat.description }}
+								</p>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endif %}
+
+	<div class="bg-white">
+		<div class="container py-6">
+			<div class="row g-5 text-dark">
 			{% for item in posts %}
 				{% include 'partial/item.twig' with { item } %}
 			{% endfor %}
@@ -17,12 +46,20 @@
 		</div>
 	</div>
 
-	<div class="container pt-6 pb-2">
-		<div class="row g-5">
-		{% for item in posts %}
-			{% include 'partial/item.twig' with { item } %}
-		{% endfor %}
-		</div>
+	<div class="container">
+			<div class="row mt-5 justify-content-between">
+				<div class="col-auto">
+					{% if posts.pagination.prev %}
+						<a href="{{posts.pagination.prev.link}}" class="px-0 btn btn-link prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}"><i class="fa-solid fa-chevron-left me-2"></i> Előző </a>
+					{% endif %}
+				</div>
+				<div class="col-auto">
+					{% if posts.pagination.next %}
+						<a href="{{posts.pagination.next.link}}" class="px-0 btn btn-link next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Következő <i class="fa-solid fa-chevron-right ms-2"></i></a>
+					{% endif %}
+				</div>
+			</div>
 	</div>
+
 </div>
 {% endblock %}

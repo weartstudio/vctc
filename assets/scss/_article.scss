@@ -31,5 +31,24 @@
 		max-width: 100%;
 	}
 
+	.gallery{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -1rem !important;
+		margin-right: -1rem !important;
+		width: 100%;
+		max-width: 100%;
+		.gallery-item{
+			padding-left: 1rem;
+			padding-right: 1rem;
+			img{
+				border: 0 !important;
+				max-width: 100% !important;
+				height: auto;
+				width: auto;
+			}
+		}
+	}
+
 
 }
